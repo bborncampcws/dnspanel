@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Defaultip:</b>
+  <%= @zone.defaultIp %>
+</p>
+
+<p>
+  <b>Domain:</b>
+  <%= @zone.domain %>
+</p>
+
+<p>
+  <b>Serial:</b>
+  <%= @zone.serial %>
+</p>
+<p>
+  <b>Records:</b>
+  <% @zone.records.each do |record| %>
+    <p>
+      <%= record.source %> 
+      <%= record.recordType %> 
+      <%= record.target %> 
+    </p>
+  <% end %>
+
+
+<h2>Ads Zone Records<h2>
+<%= form_for([@zone, @zone.records.build]) do |f| %>
+  <div class="field">
+    <%= f.label :source %>
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :recordType %>
+    <%= f.text_field :recordType %>
+  </div>
+  <div class="field">
+    <%= f.label :target %>
+    <%= f.text_field :target %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_zone_path(@zone) %> |
+<%= link_to 'Back', zones_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  defaultIp: MyString
+  domain: MyString
+  serial: 1
+
+two:
+  defaultIp: MyString
+  domain: MyString
+  serial: 1
