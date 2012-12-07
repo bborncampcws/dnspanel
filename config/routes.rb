@@ -1,4 +1,6 @@
 Dnspanel::Application.routes.draw do
+  resources :zone_updaters
+
   resources :zones do
     resources:records
   end

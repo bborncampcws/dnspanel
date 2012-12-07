@@ -68,6 +68,11 @@ class ZonesController < ApplicationController
       end
     end
   end
+  
+  def update_serial
+    @zone=Zone.find(params[:id])
+    @zone.update_serial
+  end
 
   # DELETE /zones/1
   # DELETE /zones/1.json

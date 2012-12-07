@@ -1,0 +1,33 @@
+<%= form_for(@zone_updater) do |f| %>
+  <% if @zone_updater.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@zone_updater.errors.count, "error") %> prohibited this zone_updater from being saved:</h2>
+
+      <ul>
+      <% @zone_updater.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :zone %><br />
+    <%= f.text_field :zone %>
+  </div>
+  <div class="field">
+    <%= f.label :algorithim %><br />
+    <%= f.text_field :algorithim %>
+  </div>
+  <div class="field">
+    <%= f.label :key %><br />
+    <%= f.text_field :key %>
+  </div>
+  <div class="field">
+    <%= f.label :server %><br />
+    <%= f.text_field :server %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

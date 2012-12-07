@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  zone: 
+  algorithim: MyString
+  key: MyString
+  server: MyString
+
+two:
+  zone: 
+  algorithim: MyString
+  key: MyString
+  server: MyString

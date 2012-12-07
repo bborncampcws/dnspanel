@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Zone:</b>
+  <%= @zone_updater.zone %>
+</p>
+
+<p>
+  <b>Algorithim:</b>
+  <%= @zone_updater.algorithim %>
+</p>
+
+<p>
+  <b>Key:</b>
+  <%= @zone_updater.key %>
+</p>
+
+<p>
+  <b>Server:</b>
+  <%= @zone_updater.server %>
+</p>
+
+
+<%= link_to 'Edit', edit_zone_updater_path(@zone_updater) %> |
+<%= link_to 'Back', zone_updaters_path %>

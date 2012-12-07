@@ -1,0 +1,29 @@
+<h1>Listing zone_updaters</h1>
+
+<table>
+  <tr>
+    <th>Zone</th>
+    <th>Algorithim</th>
+    <th>Key</th>
+    <th>Server</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @zone_updaters.each do |zone_updater| %>
+  <tr>
+    <td><%= zone_updater.zone %></td>
+    <td><%= zone_updater.algorithim %></td>
+    <td><%= zone_updater.key %></td>
+    <td><%= zone_updater.server %></td>
+    <td><%= link_to 'Show', zone_updater %></td>
+    <td><%= link_to 'Edit', edit_zone_updater_path(zone_updater) %></td>
+    <td><%= link_to 'Destroy', zone_updater, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Zone updater', new_zone_updater_path %>

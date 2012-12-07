@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121022013036) do
+ActiveRecord::Schema.define(:version => 20121113205546) do
 
   create_table "records", :force => true do |t|
     t.string   "source"
@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(:version => 20121022013036) do
   end
 
   add_index "records", ["zone_id"], :name => "index_records_on_zone_id"
+
+  create_table "zone_updaters", :force => true do |t|
+    t.integer  "zone_id"
+    t.string   "algorithim"
+    t.string   "key"
+    t.string   "server"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "zone_updaters", ["zone_id"], :name => "index_zone_updaters_on_zone_id"
 
   create_table "zones", :force => true do |t|
     t.string   "defaultIp"

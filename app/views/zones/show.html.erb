@@ -21,11 +21,13 @@
       <%= record.source %> 
       <%= record.recordType %> 
       <%= record.target %> 
+      <%= link_to 'Edit', edit_zone_record_path(@zone,record) %> |
+      <%= link_to 'Destroy', zone_record_path(@zone,record), :confirm => 'Are you sure?', :method => :delete %>
     </p>
   <% end %>
 
-
-<h2>Ads Zone Records<h2>
+</br>
+<h2>Add Zone Records</h2>
 <%= form_for([@zone, @zone.records.build]) do |f| %>
   <div class="field">
     <%= f.label :source %>
@@ -43,6 +45,7 @@
     <%= f.submit %>
   </div>
 <% end %>
+</br>
 
 <%= link_to 'Edit', edit_zone_path(@zone) %> |
 <%= link_to 'Back', zones_path %>

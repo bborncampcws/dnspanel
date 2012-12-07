@@ -1,0 +1,15 @@
+<%= form_for([:zone, @record]) do |f| %>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :recordType %><br />
+    <%= f.text_field :recordType %>
+  </div>
+  <div class="field">
+    <%= f.label :target %><br />
+    <%= f.text_area :target %>
+  </div>
+  <p><%= f.submit %></p>
+<% end %>
